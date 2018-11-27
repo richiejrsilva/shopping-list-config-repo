@@ -15,12 +15,16 @@ zuul:
   #stripPrefix: false
   #ignored-services: "*"
   routes:
-    file:
-      path: /file/**
-      serviceId: file-service
+    item:
+      path: /item/**
+      serviceId: item-service
       stripPrefix: false
-    profile-all:
-      path: /profile/**
-      serviceId: profile-service
+    user:
+      path: /user/**
+      serviceId: user-service
+      stripPrefix: false
+    shopping-list:
+      path: /shopping-list/**
+      serviceId: shopping-list-service
       stripPrefix: false
 
