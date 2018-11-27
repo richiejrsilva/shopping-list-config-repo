@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  session:
+    timeout: 36000
+
+eureka:
+  instance:
+    preferIpAddress : true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+
+zuul:
+  prefix: /api
+  #stripPrefix: false
+  #ignored-services: "*"
+  routes:
+    file:
+      path: /file/**
+      serviceId: file-service
+      stripPrefix: false
+    profile-all:
+      path: /profile/**
+      serviceId: profile-service
+      stripPrefix: false
+
