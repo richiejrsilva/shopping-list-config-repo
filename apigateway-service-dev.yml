@@ -24,7 +24,7 @@ zuul:
       serviceId: user-service
       stripPrefix: false
     shopping-list:
-      path: /shopping-list/**
+      path: /shoppinglist/**
       serviceId: shopping-list-service
       stripPrefix: false
 
