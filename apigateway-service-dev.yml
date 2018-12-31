@@ -15,6 +15,10 @@ zuul:
   #stripPrefix: false
   #ignored-services: "*"
   routes:
+    auth:
+        path: /auth/**
+        serviceId: auth-service
+        stripPrefix: false
     item:
       path: /item/**
       serviceId: item-service
