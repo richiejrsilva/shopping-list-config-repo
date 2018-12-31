@@ -9,7 +9,3 @@ spring:
   jpa:
     database: oracle
     show-sql: true
-  cloud:
-    batch:
-      initializer:
-        enabled: false
