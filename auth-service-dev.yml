@@ -10,3 +10,24 @@ spring:
   jpa:
     database: oracle
     show-sql: true
+    hibernate:
+      use-new-id-generator-mappings: true
+
+oauth2:
+  clients:
+  - name: password
+    types: password,refresh_token
+    clientId: trustedclient
+    clientSecret: trustedclient123
+    scopes: openid
+    expirationMinutes: 300000
+  - name: client
+    types: client_credentials
+    clientId: backclient
+    clientSecret: backclient123
+    scopes: backoffice
+    expirationMinutes: 300000
+
+logging:
+  level:
+    org.springframework.security: ERROR
